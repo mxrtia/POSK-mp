@@ -1,0 +1,10 @@
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\bin\Debug\Mikroprocesor.exe.config
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\bin\Debug\Mikroprocesor.exe
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\bin\Debug\Mikroprocesor.pdb
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.csprojAssemblyReference.cache
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.Form1.resources
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.Properties.Resources.resources
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.csproj.GenerateResource.cache
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.csproj.CoreCompileInputs.cache
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.exe
+C:\Users\mkwlo\Documents\GitHub\POSK-Mikroprocesor\Mikroprocesor\obj\Debug\Mikroprocesor.pdb
