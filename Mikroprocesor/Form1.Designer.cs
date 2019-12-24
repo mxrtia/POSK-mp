@@ -167,6 +167,7 @@
             this.register1.ReadOnly = true;
             this.register1.Size = new System.Drawing.Size(130, 22);
             this.register1.TabIndex = 6;
+            this.register1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register1.TextChanged += new System.EventHandler(this.register1_TextChanged);
             // 
             // register2
@@ -177,6 +178,7 @@
             this.register2.ReadOnly = true;
             this.register2.Size = new System.Drawing.Size(130, 22);
             this.register2.TabIndex = 7;
+            this.register2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register2.TextChanged += new System.EventHandler(this.register2_TextChanged);
             // 
             // register3
@@ -187,6 +189,7 @@
             this.register3.ReadOnly = true;
             this.register3.Size = new System.Drawing.Size(131, 22);
             this.register3.TabIndex = 8;
+            this.register3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register3.TextChanged += new System.EventHandler(this.register3_TextChanged);
             // 
             // register4
@@ -197,6 +200,7 @@
             this.register4.ReadOnly = true;
             this.register4.Size = new System.Drawing.Size(131, 22);
             this.register4.TabIndex = 9;
+            this.register4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register4.TextChanged += new System.EventHandler(this.register4_TextChanged);
             // 
             // of1
@@ -207,6 +211,8 @@
             this.of1.ReadOnly = true;
             this.of1.Size = new System.Drawing.Size(39, 22);
             this.of1.TabIndex = 10;
+            this.of1.Text = "0";
+            this.of1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // of2
             // 
@@ -216,6 +222,8 @@
             this.of2.ReadOnly = true;
             this.of2.Size = new System.Drawing.Size(39, 22);
             this.of2.TabIndex = 11;
+            this.of2.Text = "0";
+            this.of2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // of3
             // 
@@ -225,6 +233,8 @@
             this.of3.ReadOnly = true;
             this.of3.Size = new System.Drawing.Size(39, 22);
             this.of3.TabIndex = 12;
+            this.of3.Text = "0";
+            this.of3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // of4
             // 
@@ -234,6 +244,9 @@
             this.of4.ReadOnly = true;
             this.of4.Size = new System.Drawing.Size(39, 22);
             this.of4.TabIndex = 13;
+            this.of4.Tag = "";
+            this.of4.Text = "0";
+            this.of4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Funkcja
             // 
@@ -297,6 +310,7 @@
             this.register1b.ReadOnly = true;
             this.register1b.Size = new System.Drawing.Size(127, 22);
             this.register1b.TabIndex = 49;
+            this.register1b.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register1b.TextChanged += new System.EventHandler(this.register1b_TextChanged);
             // 
             // register2b
@@ -307,6 +321,7 @@
             this.register2b.ReadOnly = true;
             this.register2b.Size = new System.Drawing.Size(127, 22);
             this.register2b.TabIndex = 50;
+            this.register2b.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register2b.TextChanged += new System.EventHandler(this.register2b_TextChanged);
             // 
             // register3b
@@ -317,6 +332,7 @@
             this.register3b.ReadOnly = true;
             this.register3b.Size = new System.Drawing.Size(127, 22);
             this.register3b.TabIndex = 51;
+            this.register3b.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register3b.TextChanged += new System.EventHandler(this.register3b_TextChanged);
             // 
             // register4b
@@ -327,6 +343,7 @@
             this.register4b.ReadOnly = true;
             this.register4b.Size = new System.Drawing.Size(127, 22);
             this.register4b.TabIndex = 52;
+            this.register4b.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.register4b.TextChanged += new System.EventHandler(this.register4b_TextChanged);
             // 
             // WyborRejestru
@@ -454,7 +471,6 @@
             this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 76;
             this.label4.Text = "Dodaj stałą:";
-            this.label4.Visible = false;
             // 
             // checkBox2
             // 
@@ -465,7 +481,7 @@
             this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 75;
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Visible = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
             // 
             // label5
             // 
@@ -475,7 +491,6 @@
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 74;
             this.label5.Text = "Argument:";
-            this.label5.Visible = false;
             // 
             // button2
             // 
@@ -485,7 +500,6 @@
             this.button2.TabIndex = 73;
             this.button2.Text = "Dodaj nowy rozkaz";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // textBox2
@@ -496,7 +510,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(186, 22);
             this.textBox2.TabIndex = 72;
-            this.textBox2.Visible = false;
             // 
             // comboBox5
             // 
@@ -511,7 +524,6 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(122, 24);
             this.comboBox5.TabIndex = 71;
-            this.comboBox5.Visible = false;
             // 
             // label6
             // 
@@ -521,7 +533,6 @@
             this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 70;
             this.label6.Text = "Wybór rejestru:";
-            this.label6.Visible = false;
             // 
             // label7
             // 
@@ -531,7 +542,6 @@
             this.label7.Size = new System.Drawing.Size(107, 17);
             this.label7.TabIndex = 69;
             this.label7.Text = "Wybór rozkazu:";
-            this.label7.Visible = false;
             // 
             // comboBox4
             // 
@@ -545,7 +555,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 24);
             this.comboBox4.TabIndex = 68;
-            this.comboBox4.Visible = false;
             // 
             // Funkcja1
             // 
@@ -558,7 +567,7 @@
             this.Funkcja1.Name = "Funkcja1";
             this.Funkcja1.Size = new System.Drawing.Size(121, 24);
             this.Funkcja1.TabIndex = 67;
-            this.Funkcja1.Visible = false;
+            this.Funkcja1.SelectedIndexChanged += new System.EventHandler(this.Funkcja1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -568,7 +577,6 @@
             this.label8.Size = new System.Drawing.Size(83, 17);
             this.label8.TabIndex = 86;
             this.label8.Text = "Dodaj stałą:";
-            this.label8.Visible = false;
             // 
             // checkBox3
             // 
@@ -579,7 +587,7 @@
             this.checkBox3.Size = new System.Drawing.Size(18, 17);
             this.checkBox3.TabIndex = 85;
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.Visible = false;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.CheckBox3_CheckedChanged);
             // 
             // label9
             // 
@@ -589,7 +597,6 @@
             this.label9.Size = new System.Drawing.Size(73, 17);
             this.label9.TabIndex = 84;
             this.label9.Text = "Argument:";
-            this.label9.Visible = false;
             // 
             // button3
             // 
@@ -599,7 +606,6 @@
             this.button3.TabIndex = 83;
             this.button3.Text = "Dodaj nowy rozkaz";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // textBox3
@@ -610,7 +616,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(186, 22);
             this.textBox3.TabIndex = 82;
-            this.textBox3.Visible = false;
             // 
             // comboBox7
             // 
@@ -625,7 +630,6 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(122, 24);
             this.comboBox7.TabIndex = 81;
-            this.comboBox7.Visible = false;
             // 
             // label10
             // 
@@ -635,7 +639,6 @@
             this.label10.Size = new System.Drawing.Size(105, 17);
             this.label10.TabIndex = 80;
             this.label10.Text = "Wybór rejestru:";
-            this.label10.Visible = false;
             // 
             // label11
             // 
@@ -645,7 +648,6 @@
             this.label11.Size = new System.Drawing.Size(107, 17);
             this.label11.TabIndex = 79;
             this.label11.Text = "Wybór rozkazu:";
-            this.label11.Visible = false;
             // 
             // comboBox6
             // 
@@ -659,7 +661,6 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
             this.comboBox6.TabIndex = 78;
-            this.comboBox6.Visible = false;
             // 
             // Funkcja2
             // 
@@ -672,7 +673,7 @@
             this.Funkcja2.Name = "Funkcja2";
             this.Funkcja2.Size = new System.Drawing.Size(121, 24);
             this.Funkcja2.TabIndex = 77;
-            this.Funkcja2.Visible = false;
+            this.Funkcja2.SelectedIndexChanged += new System.EventHandler(this.Funkcja2_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -682,7 +683,6 @@
             this.label12.Size = new System.Drawing.Size(83, 17);
             this.label12.TabIndex = 96;
             this.label12.Text = "Dodaj stałą:";
-            this.label12.Visible = false;
             // 
             // checkBox4
             // 
@@ -693,7 +693,7 @@
             this.checkBox4.Size = new System.Drawing.Size(18, 17);
             this.checkBox4.TabIndex = 95;
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Visible = false;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.CheckBox4_CheckedChanged);
             // 
             // label13
             // 
@@ -703,7 +703,6 @@
             this.label13.Size = new System.Drawing.Size(73, 17);
             this.label13.TabIndex = 94;
             this.label13.Text = "Argument:";
-            this.label13.Visible = false;
             // 
             // button4
             // 
@@ -713,7 +712,6 @@
             this.button4.TabIndex = 93;
             this.button4.Text = "Dodaj nowy rozkaz";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // textBox4
@@ -724,7 +722,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(186, 22);
             this.textBox4.TabIndex = 92;
-            this.textBox4.Visible = false;
             // 
             // comboBox9
             // 
@@ -739,7 +736,6 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(122, 24);
             this.comboBox9.TabIndex = 91;
-            this.comboBox9.Visible = false;
             // 
             // label14
             // 
@@ -749,7 +745,6 @@
             this.label14.Size = new System.Drawing.Size(105, 17);
             this.label14.TabIndex = 90;
             this.label14.Text = "Wybór rejestru:";
-            this.label14.Visible = false;
             // 
             // label15
             // 
@@ -759,7 +754,6 @@
             this.label15.Size = new System.Drawing.Size(107, 17);
             this.label15.TabIndex = 89;
             this.label15.Text = "Wybór rozkazu:";
-            this.label15.Visible = false;
             // 
             // comboBox8
             // 
@@ -773,7 +767,6 @@
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(121, 24);
             this.comboBox8.TabIndex = 88;
-            this.comboBox8.Visible = false;
             // 
             // Funkcja3
             // 
@@ -786,7 +779,7 @@
             this.Funkcja3.Name = "Funkcja3";
             this.Funkcja3.Size = new System.Drawing.Size(121, 24);
             this.Funkcja3.TabIndex = 87;
-            this.Funkcja3.Visible = false;
+            this.Funkcja3.SelectedIndexChanged += new System.EventHandler(this.Funkcja3_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -796,7 +789,6 @@
             this.label16.Size = new System.Drawing.Size(83, 17);
             this.label16.TabIndex = 106;
             this.label16.Text = "Dodaj stałą:";
-            this.label16.Visible = false;
             // 
             // checkBox5
             // 
@@ -807,7 +799,7 @@
             this.checkBox5.Size = new System.Drawing.Size(18, 17);
             this.checkBox5.TabIndex = 105;
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.Visible = false;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.CheckBox5_CheckedChanged);
             // 
             // label17
             // 
@@ -817,7 +809,6 @@
             this.label17.Size = new System.Drawing.Size(73, 17);
             this.label17.TabIndex = 104;
             this.label17.Text = "Argument:";
-            this.label17.Visible = false;
             // 
             // textBox5
             // 
@@ -827,7 +818,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(186, 22);
             this.textBox5.TabIndex = 102;
-            this.textBox5.Visible = false;
             // 
             // comboBox11
             // 
@@ -842,7 +832,6 @@
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(122, 24);
             this.comboBox11.TabIndex = 101;
-            this.comboBox11.Visible = false;
             // 
             // label18
             // 
@@ -852,7 +841,6 @@
             this.label18.Size = new System.Drawing.Size(105, 17);
             this.label18.TabIndex = 100;
             this.label18.Text = "Wybór rejestru:";
-            this.label18.Visible = false;
             // 
             // label19
             // 
@@ -862,7 +850,6 @@
             this.label19.Size = new System.Drawing.Size(107, 17);
             this.label19.TabIndex = 99;
             this.label19.Text = "Wybór rozkazu:";
-            this.label19.Visible = false;
             // 
             // comboBox10
             // 
@@ -876,7 +863,6 @@
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(121, 24);
             this.comboBox10.TabIndex = 98;
-            this.comboBox10.Visible = false;
             // 
             // Funkcja4
             // 
@@ -889,7 +875,7 @@
             this.Funkcja4.Name = "Funkcja4";
             this.Funkcja4.Size = new System.Drawing.Size(121, 24);
             this.Funkcja4.TabIndex = 97;
-            this.Funkcja4.Visible = false;
+            this.Funkcja4.SelectedIndexChanged += new System.EventHandler(this.Funkcja4_SelectedIndexChanged);
             // 
             // Rozpocznij
             // 
