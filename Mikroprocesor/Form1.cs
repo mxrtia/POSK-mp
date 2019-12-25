@@ -14,13 +14,14 @@ namespace Mikroprocesor
     {
 
         static private bool czyDalej = true;
-        static private string[] rozkaz = new string[4];
-        static private byte[] rejDoc = new byte[4];
-        static private byte[] rejZr = new byte[4];
-        static private bool[][] stala = new bool[4][];
-        static private bool[] staleCheck = new bool[4];
+        static private string[] rozkaz = new string[5];
+        static private byte[] rejDoc = new byte[5];
+        static private byte[] rejZr = new byte[5];
+        static private bool[][] stala = new bool[5][];
+        static private bool[] staleCheck = new bool[5];
         private static byte iloscRozkazow = 0;
         private static byte indeksRozkazu = 0;
+        private bool button1click = true;
 
 
         public Form1()
@@ -575,6 +576,7 @@ namespace Mikroprocesor
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            button1click = true;
             Funkcja1.Visible = true;
             comboBox4.Visible = true;
             comboBox5.Visible = true;
@@ -585,11 +587,6 @@ namespace Mikroprocesor
             label4.Visible = true;
             checkBox2.Visible = true;
             button2.Visible = true;
-            radioButton5.Visible = true;
-            radioButton6.Visible = true;
-            //radioButton3.Visible = true;
-            //radioButton4.Visible = true;
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -654,9 +651,11 @@ namespace Mikroprocesor
 
             //PIERWSZY PRZYPADEK
             iloscRozkazow++;
+            if(Funkcja.SelectedItem!=null)
+                rozkaz[0] = Funkcja.SelectedItem.ToString();
+
           
-            rozkaz[0] = Funkcja.SelectedItem.ToString();
-            if (rozkaz[0].Equals("MOV"))
+            if (Funkcja.SelectedItem != null && Funkcja.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox2.SelectedItem.ToString().Equals("AX"))
                 {
@@ -676,7 +675,7 @@ namespace Mikroprocesor
                 }
             }
 
-            if (!checkBox1.Checked)
+            if (Funkcja.SelectedItem !=null && !checkBox1.Checked)
             {
 
                 if (comboBox3.SelectedItem.ToString().Equals("AX"))
@@ -702,10 +701,13 @@ namespace Mikroprocesor
             }
 
             //DRUGI PRZYPADEK
-            iloscRozkazow++;
 
-            rozkaz[1] = Funkcja1.SelectedItem.ToString();
-            if (rozkaz[1].Equals("MOV"))
+            
+            iloscRozkazow++;
+            if (Funkcja1.SelectedItem != null)
+                rozkaz[1] = Funkcja1.SelectedItem.ToString();
+            //
+            if (Funkcja1.SelectedItem != null && Funkcja1.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox4.SelectedItem.ToString().Equals("AX"))
                 {
@@ -725,7 +727,7 @@ namespace Mikroprocesor
                 }
             }
 
-            if (!checkBox2.Checked)
+            if (Funkcja1.SelectedItem !=null && !checkBox2.Checked)
             {
 
                 if (comboBox5.SelectedItem.ToString().Equals("AX"))
@@ -749,12 +751,17 @@ namespace Mikroprocesor
             {
                 stala[1] = TextControllClass.textToNumber(textBox2.Text);
             }
+           
+            
 
             //TRZECI PRZYPADEK
             iloscRozkazow++;
-
-            rozkaz[2] = Funkcja2.SelectedItem.ToString();
-            if (rozkaz[2].Equals("MOV"))
+            if (Funkcja2.SelectedItem != null)
+                rozkaz[2] = Funkcja2.SelectedItem.ToString();
+            //
+            //if (rozkaz[2].Equals("MOV"))
+            //if(Funkcja2.SelectedItem.ToString().Equals("MOV"))
+            if(Funkcja2.SelectedItem!=null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox6.SelectedItem.ToString().Equals("AX"))
                 {
@@ -774,7 +781,7 @@ namespace Mikroprocesor
                 }
             }
 
-            if (!checkBox3.Checked)
+            if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
             {
 
                 if (comboBox7.SelectedItem.ToString().Equals("AX"))
@@ -801,9 +808,10 @@ namespace Mikroprocesor
 
             //CZWARTY PRZYPADEK
             iloscRozkazow++;
-
-            rozkaz[3] = Funkcja3.SelectedItem.ToString();
-            if (rozkaz[3].Equals("MOV"))
+            if (Funkcja3.SelectedItem != null)
+                rozkaz[3] = Funkcja3.SelectedItem.ToString();
+            //
+            if (Funkcja3.SelectedItem != null && Funkcja3.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox8.SelectedItem.ToString().Equals("AX"))
                 {
@@ -823,7 +831,7 @@ namespace Mikroprocesor
                 }
             }
 
-            if (!checkBox4.Checked)
+            if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
             {
 
                 if (comboBox9.SelectedItem.ToString().Equals("AX"))
@@ -849,10 +857,13 @@ namespace Mikroprocesor
             }
 
             //PIĄTY PRZYPADEK
-            /*iloscRozkazow++;
+            iloscRozkazow++;
+            if (Funkcja4.SelectedItem != null)
+            {
+                rozkaz[4] = Funkcja4.SelectedItem.ToString();
+            }
 
-            rozkaz[4] = Funkcja4.SelectedItem.ToString();
-            if (rozkaz[4].Equals("MOV"))
+            if (Funkcja4.SelectedItem !=null && Funkcja4.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox10.SelectedItem.ToString().Equals("AX"))
                 {
@@ -896,7 +907,7 @@ namespace Mikroprocesor
             {
                 stala[4] = TextControllClass.textToNumber(textBox5.Text);
             }
-            */
+            
 
 
 
@@ -904,7 +915,7 @@ namespace Mikroprocesor
             staleCheck[1] = checkBox2.Checked;
             staleCheck[2] = checkBox3.Checked;
             staleCheck[3] = checkBox4.Checked;
-            //staleCheck[4] = checkBox5.Checked;
+            staleCheck[4] = checkBox5.Checked;
 
             int ileRazy = 0;
             if (Procesor.TF) ileRazy = 1;
@@ -971,8 +982,6 @@ namespace Mikroprocesor
             register3b.Text = Procesor.rejestrJakoTekst(Procesor.CL);
             register4.Text = Procesor.rejestrJakoTekst(Procesor.DH);
             register4b.Text = Procesor.rejestrJakoTekst(Procesor.DL);
-            //register5.Text = Procesor.rejestrJakoTekst(Procesor.EH);
-            //register5b.Text = Procesor.rejestrJakoTekst(Procesor.EL);
 
         }
 
