@@ -54,7 +54,6 @@
             this.WyborRejestru = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -65,7 +64,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,7 +73,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -85,7 +82,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -103,12 +99,13 @@
             this.Funkcja4 = new System.Windows.Forms.ComboBox();
             this.Rozpocznij = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AX
             // 
             this.AX.AutoSize = true;
-            this.AX.Location = new System.Drawing.Point(619, 89);
+            this.AX.Location = new System.Drawing.Point(467, 68);
             this.AX.Name = "AX";
             this.AX.Size = new System.Drawing.Size(26, 17);
             this.AX.TabIndex = 0;
@@ -117,7 +114,7 @@
             // BX
             // 
             this.BX.AutoSize = true;
-            this.BX.Location = new System.Drawing.Point(620, 119);
+            this.BX.Location = new System.Drawing.Point(468, 98);
             this.BX.Name = "BX";
             this.BX.Size = new System.Drawing.Size(26, 17);
             this.BX.TabIndex = 1;
@@ -126,7 +123,7 @@
             // CX
             // 
             this.CX.AutoSize = true;
-            this.CX.Location = new System.Drawing.Point(620, 147);
+            this.CX.Location = new System.Drawing.Point(468, 126);
             this.CX.Name = "CX";
             this.CX.Size = new System.Drawing.Size(26, 17);
             this.CX.TabIndex = 2;
@@ -135,7 +132,7 @@
             // DX
             // 
             this.DX.AutoSize = true;
-            this.DX.Location = new System.Drawing.Point(619, 173);
+            this.DX.Location = new System.Drawing.Point(467, 152);
             this.DX.Name = "DX";
             this.DX.Size = new System.Drawing.Size(27, 17);
             this.DX.TabIndex = 3;
@@ -144,7 +141,7 @@
             // NH
             // 
             this.NH.AutoSize = true;
-            this.NH.Location = new System.Drawing.Point(741, 64);
+            this.NH.Location = new System.Drawing.Point(589, 43);
             this.NH.Name = "NH";
             this.NH.Size = new System.Drawing.Size(28, 17);
             this.NH.TabIndex = 4;
@@ -153,7 +150,7 @@
             // NL
             // 
             this.NL.AutoSize = true;
-            this.NL.Location = new System.Drawing.Point(883, 64);
+            this.NL.Location = new System.Drawing.Point(731, 43);
             this.NL.Name = "NL";
             this.NL.Size = new System.Drawing.Size(26, 17);
             this.NL.TabIndex = 5;
@@ -161,7 +158,7 @@
             // 
             // register1
             // 
-            this.register1.Location = new System.Drawing.Point(697, 86);
+            this.register1.Location = new System.Drawing.Point(545, 65);
             this.register1.MaxLength = 8;
             this.register1.Name = "register1";
             this.register1.ReadOnly = true;
@@ -172,7 +169,7 @@
             // 
             // register2
             // 
-            this.register2.Location = new System.Drawing.Point(697, 114);
+            this.register2.Location = new System.Drawing.Point(545, 93);
             this.register2.MaxLength = 8;
             this.register2.Name = "register2";
             this.register2.ReadOnly = true;
@@ -183,7 +180,7 @@
             // 
             // register3
             // 
-            this.register3.Location = new System.Drawing.Point(696, 142);
+            this.register3.Location = new System.Drawing.Point(544, 121);
             this.register3.MaxLength = 8;
             this.register3.Name = "register3";
             this.register3.ReadOnly = true;
@@ -194,7 +191,7 @@
             // 
             // register4
             // 
-            this.register4.Location = new System.Drawing.Point(696, 170);
+            this.register4.Location = new System.Drawing.Point(544, 149);
             this.register4.MaxLength = 8;
             this.register4.Name = "register4";
             this.register4.ReadOnly = true;
@@ -205,7 +202,7 @@
             // 
             // of1
             // 
-            this.of1.Location = new System.Drawing.Point(652, 86);
+            this.of1.Location = new System.Drawing.Point(500, 65);
             this.of1.MaxLength = 1;
             this.of1.Name = "of1";
             this.of1.ReadOnly = true;
@@ -216,7 +213,7 @@
             // 
             // of2
             // 
-            this.of2.Location = new System.Drawing.Point(652, 114);
+            this.of2.Location = new System.Drawing.Point(500, 93);
             this.of2.MaxLength = 1;
             this.of2.Name = "of2";
             this.of2.ReadOnly = true;
@@ -227,7 +224,7 @@
             // 
             // of3
             // 
-            this.of3.Location = new System.Drawing.Point(652, 142);
+            this.of3.Location = new System.Drawing.Point(500, 121);
             this.of3.MaxLength = 1;
             this.of3.Name = "of3";
             this.of3.ReadOnly = true;
@@ -238,7 +235,7 @@
             // 
             // of4
             // 
-            this.of4.Location = new System.Drawing.Point(652, 170);
+            this.of4.Location = new System.Drawing.Point(500, 149);
             this.of4.MaxLength = 1;
             this.of4.Name = "of4";
             this.of4.ReadOnly = true;
@@ -285,7 +282,7 @@
             // 
             // ZerowanieRejestrow
             // 
-            this.ZerowanieRejestrow.Location = new System.Drawing.Point(799, 202);
+            this.ZerowanieRejestrow.Location = new System.Drawing.Point(647, 181);
             this.ZerowanieRejestrow.Name = "ZerowanieRejestrow";
             this.ZerowanieRejestrow.Size = new System.Drawing.Size(161, 32);
             this.ZerowanieRejestrow.TabIndex = 46;
@@ -296,7 +293,7 @@
             // OF
             // 
             this.OF.AutoSize = true;
-            this.OF.Location = new System.Drawing.Point(660, 64);
+            this.OF.Location = new System.Drawing.Point(508, 43);
             this.OF.Name = "OF";
             this.OF.Size = new System.Drawing.Size(27, 17);
             this.OF.TabIndex = 47;
@@ -304,7 +301,7 @@
             // 
             // register1b
             // 
-            this.register1b.Location = new System.Drawing.Point(833, 86);
+            this.register1b.Location = new System.Drawing.Point(681, 65);
             this.register1b.MaxLength = 8;
             this.register1b.Name = "register1b";
             this.register1b.ReadOnly = true;
@@ -315,7 +312,7 @@
             // 
             // register2b
             // 
-            this.register2b.Location = new System.Drawing.Point(833, 114);
+            this.register2b.Location = new System.Drawing.Point(681, 93);
             this.register2b.MaxLength = 8;
             this.register2b.Name = "register2b";
             this.register2b.ReadOnly = true;
@@ -326,7 +323,7 @@
             // 
             // register3b
             // 
-            this.register3b.Location = new System.Drawing.Point(833, 142);
+            this.register3b.Location = new System.Drawing.Point(681, 121);
             this.register3b.MaxLength = 8;
             this.register3b.Name = "register3b";
             this.register3b.ReadOnly = true;
@@ -337,7 +334,7 @@
             // 
             // register4b
             // 
-            this.register4b.Location = new System.Drawing.Point(833, 170);
+            this.register4b.Location = new System.Drawing.Point(681, 149);
             this.register4b.MaxLength = 8;
             this.register4b.Name = "register4b";
             this.register4b.ReadOnly = true;
@@ -375,18 +372,8 @@
             this.textBox1.Location = new System.Drawing.Point(227, 109);
             this.textBox1.MaxLength = 16;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 22);
+            this.textBox1.Size = new System.Drawing.Size(147, 22);
             this.textBox1.TabIndex = 55;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(444, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 62);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Dodaj nowy rozkaz";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 
@@ -400,7 +387,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(623, 521);
+            this.radioButton3.Location = new System.Drawing.Point(500, 480);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(190, 21);
             this.radioButton3.TabIndex = 61;
@@ -411,7 +398,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(623, 548);
+            this.radioButton4.Location = new System.Drawing.Point(500, 507);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(225, 21);
             this.radioButton4.TabIndex = 62;
@@ -422,26 +409,24 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(623, 405);
+            this.radioButton5.Location = new System.Drawing.Point(500, 388);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(216, 21);
             this.radioButton5.TabIndex = 63;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Tryb całościowego wykonania";
             this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.Visible = false;
             // 
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(623, 432);
+            this.radioButton6.Location = new System.Drawing.Point(500, 415);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(156, 21);
             this.radioButton6.TabIndex = 64;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Tryb pracy krokowej";
             this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.Visible = false;
             // 
             // checkBox1
             // 
@@ -492,23 +477,13 @@
             this.label5.TabIndex = 74;
             this.label5.Text = "Argument:";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(444, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 62);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "Dodaj nowy rozkaz";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(227, 226);
             this.textBox2.MaxLength = 16;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 22);
+            this.textBox2.Size = new System.Drawing.Size(147, 22);
             this.textBox2.TabIndex = 72;
             // 
             // comboBox5
@@ -598,23 +573,13 @@
             this.label9.TabIndex = 84;
             this.label9.Text = "Argument:";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(444, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 62);
-            this.button3.TabIndex = 83;
-            this.button3.Text = "Dodaj nowy rozkaz";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
             // textBox3
             // 
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(227, 352);
             this.textBox3.MaxLength = 16;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 22);
+            this.textBox3.Size = new System.Drawing.Size(147, 22);
             this.textBox3.TabIndex = 82;
             // 
             // comboBox7
@@ -704,23 +669,13 @@
             this.label13.TabIndex = 94;
             this.label13.Text = "Argument:";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(444, 439);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 62);
-            this.button4.TabIndex = 93;
-            this.button4.Text = "Dodaj nowy rozkaz";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
             // textBox4
             // 
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(227, 485);
             this.textBox4.MaxLength = 16;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 22);
+            this.textBox4.Size = new System.Drawing.Size(147, 22);
             this.textBox4.TabIndex = 92;
             // 
             // comboBox9
@@ -816,7 +771,7 @@
             this.textBox5.Location = new System.Drawing.Point(227, 623);
             this.textBox5.MaxLength = 16;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 22);
+            this.textBox5.Size = new System.Drawing.Size(147, 22);
             this.textBox5.TabIndex = 102;
             // 
             // comboBox11
@@ -879,9 +834,9 @@
             // 
             // Rozpocznij
             // 
-            this.Rozpocznij.Location = new System.Drawing.Point(663, 287);
+            this.Rozpocznij.Location = new System.Drawing.Point(500, 267);
             this.Rozpocznij.Name = "Rozpocznij";
-            this.Rozpocznij.Size = new System.Drawing.Size(146, 63);
+            this.Rozpocznij.Size = new System.Drawing.Size(146, 84);
             this.Rozpocznij.TabIndex = 107;
             this.Rozpocznij.Text = "ROZPOCZNIJ";
             this.Rozpocznij.UseVisualStyleBackColor = true;
@@ -890,18 +845,29 @@
             // Next
             // 
             this.Next.Enabled = false;
-            this.Next.Location = new System.Drawing.Point(833, 286);
+            this.Next.Location = new System.Drawing.Point(666, 268);
             this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(85, 64);
+            this.Next.Size = new System.Drawing.Size(113, 35);
             this.Next.TabIndex = 108;
-            this.Next.Text = "->";
+            this.Next.Text = "→";
             this.Next.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(666, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 40);
+            this.button1.TabIndex = 109;
+            this.button1.Text = "INSTRUKCJA";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 682);
+            this.ClientSize = new System.Drawing.Size(850, 682);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Rozpocznij);
             this.Controls.Add(this.label16);
@@ -916,7 +882,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.comboBox9);
             this.Controls.Add(this.label14);
@@ -926,7 +891,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.comboBox7);
             this.Controls.Add(this.label10);
@@ -936,7 +900,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label6);
@@ -950,7 +913,6 @@
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.WyborRejestru);
@@ -1013,7 +975,6 @@
         private System.Windows.Forms.Label WyborRejestru;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
@@ -1024,7 +985,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label6;
@@ -1034,7 +994,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label10;
@@ -1044,7 +1003,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.Label label14;
@@ -1062,6 +1020,7 @@
         private System.Windows.Forms.ComboBox Funkcja4;
         private System.Windows.Forms.Button Rozpocznij;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.Button button1;
     }
 }
 

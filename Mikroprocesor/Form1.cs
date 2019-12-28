@@ -21,7 +21,7 @@ namespace Mikroprocesor
         static private bool[] staleCheck = new bool[5];
         private static byte iloscRozkazow = 0;
         private static byte indeksRozkazu = 0;
-        private bool button1click = true;
+        //private bool button1click = true;
 
 
         public Form1()
@@ -574,61 +574,7 @@ namespace Mikroprocesor
             //register5b.Text = Procesor.zerujUstawienia(Procesor.DL);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            button1click = true;
-            Funkcja1.Visible = true;
-            comboBox4.Visible = true;
-            comboBox5.Visible = true;
-            textBox2.Visible = true;
-            label7.Visible = true;
-            label6.Visible = true;
-            label5.Visible = true;
-            label4.Visible = true;
-            checkBox2.Visible = true;
-            button2.Visible = true;
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            Funkcja2.Visible = true;
-            comboBox6.Visible = true;
-            comboBox7.Visible = true;
-            textBox3.Visible = true;
-            label8.Visible = true;
-            label9.Visible = true;
-            label10.Visible = true;
-            label11.Visible = true;
-            checkBox3.Visible = true;
-            button3.Visible = true;
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            Funkcja3.Visible = true;
-            comboBox8.Visible = true;
-            comboBox9.Visible = true;
-            textBox4.Visible = true;
-            label12.Visible = true;
-            label13.Visible = true;
-            label14.Visible = true;
-            label15.Visible = true;
-            checkBox4.Visible = true;
-            button4.Visible = true;
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            Funkcja4.Visible = true;
-            comboBox10.Visible = true;
-            comboBox11.Visible = true;
-            textBox5.Visible = true;
-            label16.Visible = true;
-            label17.Visible = true;
-            label18.Visible = true;
-            label19.Visible = true;
-            checkBox5.Visible = true;
-        }
+      
 
         private void Rozpocznij_Click(object sender, EventArgs e)
         {
@@ -883,7 +829,7 @@ namespace Mikroprocesor
                 }
             }
 
-            if (!checkBox5.Checked)
+            if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
             {
 
                 if (comboBox11.SelectedItem.ToString().Equals("AX"))
@@ -985,5 +931,9 @@ namespace Mikroprocesor
 
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Procesor posiada cztery 16-bitowe rejestry: AX, BX, CX i DX." + "\n" + "\n" + "Użytkownik może wybrać z listy rozkaz, a następnie określić, czy ma on zostać wykonany dla danego argumentu, czy dla konkretnej stałej." + "\n" + "\n" + "Mikroprocesor może wykonać maksymalnie pięć rozkazów jednocześnie, przy czym użytkownik musi użyć minimalnie jednego rozkazu, aby mikroprocesor rozpoczął pracę prawidłowo." + "\n" + "\n" + "W prawym dolnym rogu okna użytkownik może wybrać, czy mikroprocesor ma pracować w trybie pracy krokowej lub całościowej (domyślnie jest to praca całościowa) oraz jaki ma być jego tryb adresowania (natychmiastowy lub rejestrowy).", "Instrukcja");
+        }
     }
 }
