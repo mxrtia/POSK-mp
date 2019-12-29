@@ -31,20 +31,20 @@ namespace Mikroprocesor
 
         private void register1_TextChanged(object sender, EventArgs e)
         {
-            register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
+            //register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
         }
 
         private void register1b_TextChanged(object sender, EventArgs e)
         {
-            register1b.Text = Procesor.rejestrJakoTekst(Procesor.AL);
+            //register1b.Text = Procesor.rejestrJakoTekst(Procesor.AL);
         }
         private void register2_TextChanged(object sender, EventArgs e)
         {
-            register2.Text = Procesor.rejestrJakoTekst(Procesor.BH);
+            //register2.Text = Procesor.rejestrJakoTekst(Procesor.BH);
         }
         private void register2b_TextChanged(object sender, EventArgs e)
         {
-            register2b.Text = Procesor.rejestrJakoTekst(Procesor.BL);
+            //register2b.Text = Procesor.rejestrJakoTekst(Procesor.BL);
         }
 
         private void register3_TextChanged(object sender, EventArgs e)
@@ -570,8 +570,7 @@ namespace Mikroprocesor
             register3b.Text = Procesor.zerujUstawienia(Procesor.CL);
             register4.Text = Procesor.zerujUstawienia(Procesor.DH);
             register4b.Text = Procesor.zerujUstawienia(Procesor.DL);
-            //register5.Text = Procesor.zerujUstawienia(Procesor.DH);
-            //register5b.Text = Procesor.zerujUstawienia(Procesor.DL);
+  
         }
 
       
@@ -621,34 +620,41 @@ namespace Mikroprocesor
                 }
             }
 
-            if (Funkcja.SelectedItem !=null && !checkBox1.Checked)
+            try
             {
+                if (Funkcja.SelectedItem != null && !checkBox1.Checked)
+                {
 
-                if (comboBox3.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejZr[0] = Procesor.AH;
+                    if (comboBox3.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejZr[0] = Procesor.AH;
+                    }
+                    if (comboBox3.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejZr[0] = Procesor.BH;
+                    }
+                    if (comboBox3.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejZr[0] = Procesor.CH;
+                    }
+                    if (comboBox3.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejZr[0] = Procesor.DH;
+                    }
                 }
-                if (comboBox3.SelectedItem.ToString().Equals("BX"))
+                else
                 {
-                    rejZr[0] = Procesor.BH;
-                }
-                if (comboBox3.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejZr[0] = Procesor.CH;
-                }
-                if (comboBox3.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejZr[0] = Procesor.DH;
+                    stala[0] = TextControllClass.textToNumber(textBox1.Text);
                 }
             }
-            else
+            catch (Exception)
             {
-                stala[0] = TextControllClass.textToNumber(textBox1.Text);
+                MessageBox.Show("Wybierz argument dla rozkazu 1.", "Błąd");
             }
 
             //DRUGI PRZYPADEK
 
-            
+
             iloscRozkazow++;
             if (Funkcja1.SelectedItem != null)
                 rozkaz[1] = Funkcja1.SelectedItem.ToString();
@@ -673,40 +679,43 @@ namespace Mikroprocesor
                 }
             }
 
-            if (Funkcja1.SelectedItem !=null && !checkBox2.Checked)
+            try
             {
+                if (Funkcja1.SelectedItem != null && !checkBox2.Checked)
+                {
 
-                if (comboBox5.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejZr[1] = Procesor.AH;
+                    if (comboBox5.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejZr[1] = Procesor.AH;
+                    }
+                    if (comboBox5.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejZr[1] = Procesor.BH;
+                    }
+                    if (comboBox5.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejZr[1] = Procesor.CH;
+                    }
+                    if (comboBox5.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejZr[1] = Procesor.DH;
+                    }
                 }
-                if (comboBox5.SelectedItem.ToString().Equals("BX"))
+                else
                 {
-                    rejZr[1] = Procesor.BH;
-                }
-                if (comboBox5.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejZr[1] = Procesor.CH;
-                }
-                if (comboBox5.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejZr[1] = Procesor.DH;
+                    stala[1] = TextControllClass.textToNumber(textBox2.Text);
                 }
             }
-            else
+            catch (Exception)
             {
-                stala[1] = TextControllClass.textToNumber(textBox2.Text);
+                MessageBox.Show("Wybierz argument dla rozkazu 2.", "Błąd");
             }
-           
-            
 
             //TRZECI PRZYPADEK
             iloscRozkazow++;
             if (Funkcja2.SelectedItem != null)
                 rozkaz[2] = Funkcja2.SelectedItem.ToString();
-            //
-            //if (rozkaz[2].Equals("MOV"))
-            //if(Funkcja2.SelectedItem.ToString().Equals("MOV"))
+
             if(Funkcja2.SelectedItem!=null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox6.SelectedItem.ToString().Equals("AX"))
@@ -727,36 +736,43 @@ namespace Mikroprocesor
                 }
             }
 
-            if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
+            try
             {
+                if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
+                {
 
-                if (comboBox7.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejZr[2] = Procesor.AH;
+                    if (comboBox7.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejZr[2] = Procesor.AH;
+                    }
+                    if (comboBox7.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejZr[2] = Procesor.BH;
+                    }
+                    if (comboBox7.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejZr[2] = Procesor.CH;
+                    }
+                    if (comboBox7.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejZr[2] = Procesor.DH;
+                    }
                 }
-                if (comboBox7.SelectedItem.ToString().Equals("BX"))
+                else
                 {
-                    rejZr[2] = Procesor.BH;
-                }
-                if (comboBox7.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejZr[2] = Procesor.CH;
-                }
-                if (comboBox7.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejZr[2] = Procesor.DH;
+                    stala[2] = TextControllClass.textToNumber(textBox3.Text);
                 }
             }
-            else
+            catch(Exception)
             {
-                stala[2] = TextControllClass.textToNumber(textBox3.Text);
+                MessageBox.Show("Wybierz argument dla rozkazu 3.", "Błąd");
             }
 
-            //CZWARTY PRZYPADEK
-            iloscRozkazow++;
+    //CZWARTY PRZYPADEK
+    iloscRozkazow++;
             if (Funkcja3.SelectedItem != null)
                 rozkaz[3] = Funkcja3.SelectedItem.ToString();
-            //
+            
             if (Funkcja3.SelectedItem != null && Funkcja3.SelectedItem.ToString().Equals("MOV"))
             {
                 if (comboBox8.SelectedItem.ToString().Equals("AX"))
@@ -777,29 +793,36 @@ namespace Mikroprocesor
                 }
             }
 
-            if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
+            try
             {
+                if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
+                {
 
-                if (comboBox9.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejZr[3] = Procesor.AH;
+                    if (comboBox9.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejZr[3] = Procesor.AH;
+                    }
+                    if (comboBox9.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejZr[3] = Procesor.BH;
+                    }
+                    if (comboBox9.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejZr[3] = Procesor.CH;
+                    }
+                    if (comboBox9.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejZr[3] = Procesor.DH;
+                    }
                 }
-                if (comboBox9.SelectedItem.ToString().Equals("BX"))
+                else
                 {
-                    rejZr[3] = Procesor.BH;
-                }
-                if (comboBox9.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejZr[3] = Procesor.CH;
-                }
-                if (comboBox9.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejZr[3] = Procesor.DH;
+                    stala[3] = TextControllClass.textToNumber(textBox4.Text);
                 }
             }
-            else
+            catch (Exception)
             {
-                stala[3] = TextControllClass.textToNumber(textBox4.Text);
+                MessageBox.Show("Wybierz argument dla rozkazu 4.", "Błąd");
             }
 
             //PIĄTY PRZYPADEK
@@ -829,30 +852,39 @@ namespace Mikroprocesor
                 }
             }
 
-            if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
+            try
             {
+                if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
+                {
 
-                if (comboBox11.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejZr[4] = Procesor.AH;
+                    if (comboBox11.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejZr[4] = Procesor.AH;
+                    }
+                    if (comboBox11.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejZr[4] = Procesor.BH;
+                    }
+                    if (comboBox11.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejZr[4] = Procesor.CH;
+                    }
+                    if (comboBox11.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejZr[4] = Procesor.DH;
+                    }
                 }
-                if (comboBox11.SelectedItem.ToString().Equals("BX"))
+                else
                 {
-                    rejZr[4] = Procesor.BH;
-                }
-                if (comboBox11.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejZr[4] = Procesor.CH;
-                }
-                if (comboBox11.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejZr[4] = Procesor.DH;
+                    stala[4] = TextControllClass.textToNumber(textBox5.Text);
                 }
             }
-            else
+            catch(Exception)
             {
-                stala[4] = TextControllClass.textToNumber(textBox5.Text);
+                MessageBox.Show("Wybierz argument dla rozkazu 5.", "Błąd");
             }
+
+
             
 
 
@@ -934,6 +966,96 @@ namespace Mikroprocesor
         private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Procesor posiada cztery 16-bitowe rejestry: AX, BX, CX i DX." + "\n" + "\n" + "Użytkownik może wybrać z listy rozkaz, a następnie określić, czy ma on zostać wykonany dla danego argumentu, czy dla konkretnej stałej." + "\n" + "\n" + "Mikroprocesor może wykonać maksymalnie pięć rozkazów jednocześnie, przy czym użytkownik musi użyć minimalnie jednego rozkazu, aby mikroprocesor rozpoczął pracę prawidłowo." + "\n" + "\n" + "W prawym dolnym rogu okna użytkownik może wybrać, czy mikroprocesor ma pracować w trybie pracy krokowej lub całościowej (domyślnie jest to praca całościowa) oraz jaki ma być jego tryb adresowania (natychmiastowy lub rejestrowy).", "Instrukcja");
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            switch (rozkaz[indeksRozkazu])
+            {
+                case "MOV":
+                    if (!staleCheck[indeksRozkazu]) Procesor.MOV(rejDoc[indeksRozkazu], rejZr[indeksRozkazu]);
+                    else Procesor.MOV(rejDoc[indeksRozkazu], stala[indeksRozkazu]);
+                    break;
+
+                case "ADD":
+                    if (!staleCheck[indeksRozkazu]) Procesor.ADD(rejZr[indeksRozkazu]);
+                    else Procesor.ADD(stala[indeksRozkazu]);
+                    break;
+
+                case "SUB":
+                    if (!staleCheck[indeksRozkazu]) Procesor.SUB(rejZr[indeksRozkazu]);
+                    else Procesor.SUB(stala[indeksRozkazu]);
+                    break;
+
+                default:
+                    break;
+            }
+            switch (rejDoc[indeksRozkazu])
+            {
+                case Procesor.AH:
+                    if (Procesor.jestOF()) of1.Text = "1";
+                    else of1.Text = "0";
+                    break;
+
+                case Procesor.BH:
+                    if (Procesor.jestOF()) of2.Text = "1";
+                    else of2.Text = "0";
+                    break;
+
+                case Procesor.CH:
+                    if (Procesor.jestOF()) of3.Text = "1";
+                    else of3.Text = "0";
+                    break;
+                case Procesor.DH:
+                    if (Procesor.jestOF()) of4.Text = "1";
+                    else of4.Text = "0";
+                    break;
+
+                default:
+                    break;
+            }
+            indeksRozkazu++;
+            if (indeksRozkazu >= iloscRozkazow)
+            {
+                indeksRozkazu = 0;
+                iloscRozkazow = 0;
+                radioButton6.Checked = false;
+                Next.Enabled = false;
+                //checkBoxRozkaz1.Enabled = true;
+                //Next.Enabled = true;
+               
+            }
+
+
+
+
+
+            register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
+            register1b.Text = Procesor.rejestrJakoTekst(Procesor.AL);
+            register2.Text = Procesor.rejestrJakoTekst(Procesor.BH);
+            register2b.Text = Procesor.rejestrJakoTekst(Procesor.BL);
+            register3.Text = Procesor.rejestrJakoTekst(Procesor.CH);
+            register3b.Text = Procesor.rejestrJakoTekst(Procesor.CL);
+            register4.Text = Procesor.rejestrJakoTekst(Procesor.DH);
+            register4b.Text = Procesor.rejestrJakoTekst(Procesor.DL);
+            textBox1.Text = "0000000000000000";
+            textBox2.Text = "0000000000000000";
+            textBox3.Text = "0000000000000000";
+            textBox4.Text = "0000000000000000";
+            //checkBoxRozkaz1.Checked = false;
+        }
+
+        private void RadioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Procesor.TF)
+            {
+                Procesor.TF = false;
+
+            }
+            else
+            {
+                Procesor.TF = true;
+            }
         }
     }
 }

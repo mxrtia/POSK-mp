@@ -100,6 +100,7 @@
             this.Rozpocznij = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AX
@@ -387,28 +388,27 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(500, 480);
+            this.radioButton3.Location = new System.Drawing.Point(500, 525);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(190, 21);
             this.radioButton3.TabIndex = 61;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Tryb adresowy rejestrowy";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(500, 507);
+            this.radioButton4.Location = new System.Drawing.Point(500, 552);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(225, 21);
             this.radioButton4.TabIndex = 62;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Tryb adresowy natychmiastowy";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
+            this.radioButton5.Checked = true;
             this.radioButton5.Location = new System.Drawing.Point(500, 388);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(216, 21);
@@ -427,6 +427,7 @@
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Tryb pracy krokowej";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.RadioButton6_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -844,13 +845,13 @@
             // 
             // Next
             // 
-            this.Next.Enabled = false;
             this.Next.Location = new System.Drawing.Point(666, 268);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(113, 35);
             this.Next.TabIndex = 108;
             this.Next.Text = "→";
             this.Next.UseVisualStyleBackColor = true;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // button1
             // 
@@ -862,11 +863,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(500, 465);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 17);
+            this.label20.TabIndex = 110;
+            this.label20.Text = "label20";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 682);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Rozpocznij);
@@ -1021,6 +1032,7 @@
         private System.Windows.Forms.Button Rozpocznij;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label20;
     }
 }
 

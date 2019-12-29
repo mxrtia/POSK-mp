@@ -361,12 +361,13 @@ namespace Mikroprocesor
             return buff;
         }
 
-        public static string zerujUstawienia(byte adresRejestru)
+        public static string zerujUstawienia(byte adresRejestru2)
         {
             string buff = "";
             for (int i = 0; i < 8; i++)
             {
-               buff += "0"; 
+                if (rejestr[adresRejestru2]) buff += "0";
+                else buff += "0";
             }
             return buff;
         }
