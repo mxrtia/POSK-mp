@@ -29,44 +29,6 @@ namespace Mikroprocesor
             InitializeComponent();
         }
 
-        private void register1_TextChanged(object sender, EventArgs e)
-        {
-            //register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
-        }
-
-        private void register1b_TextChanged(object sender, EventArgs e)
-        {
-            //register1b.Text = Procesor.rejestrJakoTekst(Procesor.AL);
-        }
-        private void register2_TextChanged(object sender, EventArgs e)
-        {
-            //register2.Text = Procesor.rejestrJakoTekst(Procesor.BH);
-        }
-        private void register2b_TextChanged(object sender, EventArgs e)
-        {
-            //register2b.Text = Procesor.rejestrJakoTekst(Procesor.BL);
-        }
-
-        private void register3_TextChanged(object sender, EventArgs e)
-        {
-            //register3.Text = Procesor.rejestrJakoTekst(Procesor.CH);
-        }
-
-        private void register3b_TextChanged(object sender, EventArgs e)
-        {
-            //register3b.Text = Procesor.rejestrJakoTekst(Procesor.CL);
-        }
-
-        private void register4_TextChanged(object sender, EventArgs e)
-        {
-            //register4.Text = Procesor.rejestrJakoTekst(Procesor.DH);
-        }
-
-        private void register4b_TextChanged(object sender, EventArgs e)
-        {
-            //register4b.Text = Procesor.rejestrJakoTekst(Procesor.DL);
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
@@ -77,8 +39,6 @@ namespace Mikroprocesor
             register3b.Text = Procesor.rejestrJakoTekst(Procesor.CL);
             register4.Text = Procesor.rejestrJakoTekst(Procesor.DH);
             register4b.Text = Procesor.rejestrJakoTekst(Procesor.DL);
-            
-
         }
 
         //COMBOBOXY WYBORU FUNKCJI
@@ -151,8 +111,6 @@ namespace Mikroprocesor
                     default:
                         break;
                 }
-
-
             }
             catch (NullReferenceException)
             {
@@ -227,9 +185,7 @@ namespace Mikroprocesor
 
                     default:
                         break;
-                }
-
-
+                }                
             }
             catch (NullReferenceException)
             {
@@ -305,8 +261,6 @@ namespace Mikroprocesor
                     default:
                         break;
                 }
-
-
             }
             catch (NullReferenceException)
             {
@@ -459,8 +413,6 @@ namespace Mikroprocesor
                     default:
                         break;
                 }
-
-
             }
             catch (NullReferenceException)
             {
@@ -885,10 +837,6 @@ namespace Mikroprocesor
             }
 
 
-            
-
-
-
             staleCheck[0] = checkBox1.Checked;
             staleCheck[1] = checkBox2.Checked;
             staleCheck[2] = checkBox3.Checked;
@@ -948,8 +896,6 @@ namespace Mikroprocesor
 
                 indeksRozkazu++;
             }
-
-
 
 
             register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
@@ -1023,12 +969,7 @@ namespace Mikroprocesor
                 Next.Enabled = false;
                 //checkBoxRozkaz1.Enabled = true;
                 //Next.Enabled = true;
-               
             }
-
-
-
-
 
             register1.Text = Procesor.rejestrJakoTekst(Procesor.AH);
             register1b.Text = Procesor.rejestrJakoTekst(Procesor.AL);
@@ -1055,6 +996,27 @@ namespace Mikroprocesor
             {
                 Procesor.TF = true;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (of1.Visible == false)
+            {
+                OF.Visible = true;
+                of1.Visible = true;
+                of2.Visible = true;
+                of3.Visible = true;
+                of4.Visible = true;
+            }
+            else
+            {
+                OF.Visible = false;
+                of1.Visible = false;
+                of2.Visible = false;
+                of3.Visible = false;
+                of4.Visible = false;
+            }
+            
         }
     }
 }
