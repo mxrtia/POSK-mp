@@ -90,6 +90,7 @@ namespace Mikroprocesor
                 {
                     case "MOV":
                         comboBox2.Enabled = true;
+                        comboBox2.SelectedIndex = 0;
 
                         if (checkBox1.Checked)
                         {
@@ -481,7 +482,7 @@ namespace Mikroprocesor
             {
                 comboBox3.Enabled = true;
                 //rejestrZrListBox1.SelectedIndex = 0;
-                textBox1.Text = "00000000";
+                textBox1.Text = "0000000000000000";
                 textBox1.Enabled = false;
             }
         }
@@ -499,7 +500,7 @@ namespace Mikroprocesor
             {
                 comboBox5.Enabled = true;
                 //rejestrZrListBox1.SelectedIndex = 0;
-                textBox2.Text = "00000000";
+                textBox2.Text = "0000000000000000";
                 textBox2.Enabled = false;
             }
         }
@@ -517,7 +518,7 @@ namespace Mikroprocesor
             {
                 comboBox7.Enabled = true;
                 //rejestrZrListBox1.SelectedIndex = 0;
-                textBox3.Text = "00000000";
+                textBox3.Text = "0000000000000000";
                 textBox3.Enabled = false;
             }
         }
@@ -535,7 +536,7 @@ namespace Mikroprocesor
             {
                 comboBox9.Enabled = true;
                 //rejestrZrListBox1.SelectedIndex = 0;
-                textBox4.Text = "00000000";
+                textBox4.Text = "0000000000000000";
                 textBox4.Enabled = false;
             }
         }
@@ -553,7 +554,7 @@ namespace Mikroprocesor
             {
                 comboBox11.Enabled = true;
                 //rejestrZrListBox1.SelectedIndex = 0;
-                textBox5.Text = "00000000";
+                textBox5.Text = "0000000000000000";
                 textBox5.Enabled = false;
             }
         }
@@ -598,7 +599,6 @@ namespace Mikroprocesor
             iloscRozkazow++;
             if(Funkcja.SelectedItem!=null)
                 rozkaz[0] = Funkcja.SelectedItem.ToString();
-
           
             if (Funkcja.SelectedItem != null && Funkcja.SelectedItem.ToString().Equals("MOV"))
             {
@@ -768,8 +768,8 @@ namespace Mikroprocesor
                 MessageBox.Show("Wybierz argument dla rozkazu 3.", "Błąd");
             }
 
-    //CZWARTY PRZYPADEK
-    iloscRozkazow++;
+            //CZWARTY PRZYPADEK
+            iloscRozkazow++;
             if (Funkcja3.SelectedItem != null)
                 rozkaz[3] = Funkcja3.SelectedItem.ToString();
             
@@ -1042,7 +1042,6 @@ namespace Mikroprocesor
             textBox2.Text = "0000000000000000";
             textBox3.Text = "0000000000000000";
             textBox4.Text = "0000000000000000";
-            //checkBoxRozkaz1.Checked = false;
         }
 
         private void RadioButton6_CheckedChanged(object sender, EventArgs e)
