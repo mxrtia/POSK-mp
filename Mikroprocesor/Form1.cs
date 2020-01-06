@@ -530,8 +530,7 @@ namespace Mikroprocesor
 
         private void Rozpocznij_Click(object sender, EventArgs e)
         {
-            //krokCheckBox.Enabled = false;
-            //checkBoxRozkaz1.Enabled = false;
+
             if (Procesor.TF) Next.Enabled = true;
             else Next.Enabled = false;
 
@@ -548,292 +547,629 @@ namespace Mikroprocesor
             }
 
             //PIERWSZY PRZYPADEK
-            iloscRozkazow++;
-            if(Funkcja.SelectedItem!=null)
-                rozkaz[0] = Funkcja.SelectedItem.ToString();
-          
-            if (Funkcja.SelectedItem != null && Funkcja.SelectedItem.ToString().Equals("MOV"))
+            if (rbIns.Checked == true)
             {
-                if (comboBox2.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejDoc[0] = Procesor.AH;
-                }
-                if (comboBox2.SelectedItem.ToString().Equals("BX"))
-                {
-                    rejDoc[0] = Procesor.BH;
-                }
-                if (comboBox2.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejDoc[0] = Procesor.CH;
-                }
-                if (comboBox2.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejDoc[0] = Procesor.DH;
-                }
-            }
-
-            try
-            {
-                if (Funkcja.SelectedItem != null && !checkBox1.Checked)
-                {
-
-                    if (comboBox3.SelectedItem.ToString().Equals("AX"))
-                    {
-                        rejZr[0] = Procesor.AH;
-                    }
-                    if (comboBox3.SelectedItem.ToString().Equals("BX"))
-                    {
-                        rejZr[0] = Procesor.BH;
-                    }
-                    if (comboBox3.SelectedItem.ToString().Equals("CX"))
-                    {
-                        rejZr[0] = Procesor.CH;
-                    }
-                    if (comboBox3.SelectedItem.ToString().Equals("DX"))
-                    {
-                        rejZr[0] = Procesor.DH;
-                    }
-                }
+                if (textBox1.Text.Length == 0)
+                    MessageBox.Show("This field cannot be empty!");
                 else
                 {
-                    stala[0] = TextControllClass.textToNumber(textBox1.Text);
+                    iloscRozkazow++;
+                    if (Funkcja.SelectedItem != null)
+                        rozkaz[0] = Funkcja.SelectedItem.ToString();
+
+                    if (Funkcja.SelectedItem != null && Funkcja.SelectedItem.ToString().Equals("MOV"))
+                    {
+                        if (comboBox2.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejDoc[0] = Procesor.AH;
+                        }
+                        if (comboBox2.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejDoc[0] = Procesor.BH;
+                        }
+                        if (comboBox2.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejDoc[0] = Procesor.CH;
+                        }
+                        if (comboBox2.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejDoc[0] = Procesor.DH;
+                        }
+                    }
+
+                    try
+                    {
+                        if (Funkcja.SelectedItem != null && !checkBox1.Checked)
+                        {
+
+                            if (comboBox3.SelectedItem.ToString().Equals("AX"))
+                            {
+                                rejZr[0] = Procesor.AH;
+                            }
+                            if (comboBox3.SelectedItem.ToString().Equals("BX"))
+                            {
+                                rejZr[0] = Procesor.BH;
+                            }
+                            if (comboBox3.SelectedItem.ToString().Equals("CX"))
+                            {
+                                rejZr[0] = Procesor.CH;
+                            }
+                            if (comboBox3.SelectedItem.ToString().Equals("DX"))
+                            {
+                                rejZr[0] = Procesor.DH;
+                            }
+                        }
+                        else
+                        {
+                            stala[0] = TextControllClass.TextToNumber(textBox1.Text);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wybierz argument dla rozkazu 1.", "Błąd");
+                    }
                 }
             }
-            catch (Exception)
+            if (rbReg.Checked == true)
             {
-                MessageBox.Show("Wybierz argument dla rozkazu 1.", "Błąd");
+                iloscRozkazow++;
+                if (Funkcja.SelectedItem != null)
+                    rozkaz[0] = Funkcja.SelectedItem.ToString();
+
+                if (Funkcja.SelectedItem != null && Funkcja.SelectedItem.ToString().Equals("MOV"))
+                {
+                    if (comboBox2.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejDoc[0] = Procesor.AH;
+                    }
+                    if (comboBox2.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejDoc[0] = Procesor.BH;
+                    }
+                    if (comboBox2.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejDoc[0] = Procesor.CH;
+                    }
+                    if (comboBox2.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejDoc[0] = Procesor.DH;
+                    }
+                }
+
+                try
+                {
+                    if (Funkcja.SelectedItem != null && !checkBox1.Checked)
+                    {
+
+                        if (comboBox3.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejZr[0] = Procesor.AH;
+                        }
+                        if (comboBox3.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejZr[0] = Procesor.BH;
+                        }
+                        if (comboBox3.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejZr[0] = Procesor.CH;
+                        }
+                        if (comboBox3.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejZr[0] = Procesor.DH;
+                        }
+                    }
+                    else
+                    {
+                        stala[0] = TextControllClass.TextToNumber(textBox1.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wybierz argument dla rozkazu 1.", "Błąd");
+                }
             }
 
             //DRUGI PRZYPADEK
 
-
-            iloscRozkazow++;
-            if (Funkcja1.SelectedItem != null)
-                rozkaz[1] = Funkcja1.SelectedItem.ToString();
-            //
-            if (Funkcja1.SelectedItem != null && Funkcja1.SelectedItem.ToString().Equals("MOV"))
+            if (rbIns.Checked == true)
             {
-                if (comboBox4.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejDoc[1] = Procesor.AH;
-                }
-                if (comboBox4.SelectedItem.ToString().Equals("BX"))
-                {
-                    rejDoc[1] = Procesor.BH;
-                }
-                if (comboBox4.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejDoc[1] = Procesor.CH;
-                }
-                if (comboBox4.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejDoc[1] = Procesor.DH;
-                }
-            }
-
-            try
-            {
-                if (Funkcja1.SelectedItem != null && !checkBox2.Checked)
-                {
-
-                    if (comboBox5.SelectedItem.ToString().Equals("AX"))
-                    {
-                        rejZr[1] = Procesor.AH;
-                    }
-                    if (comboBox5.SelectedItem.ToString().Equals("BX"))
-                    {
-                        rejZr[1] = Procesor.BH;
-                    }
-                    if (comboBox5.SelectedItem.ToString().Equals("CX"))
-                    {
-                        rejZr[1] = Procesor.CH;
-                    }
-                    if (comboBox5.SelectedItem.ToString().Equals("DX"))
-                    {
-                        rejZr[1] = Procesor.DH;
-                    }
-                }
+                if (textBox2.Text.Length == 0)
+                    MessageBox.Show("This field cannot be empty!");
                 else
                 {
-                    stala[1] = TextControllClass.textToNumber(textBox2.Text);
+                    iloscRozkazow++;
+                    if (Funkcja1.SelectedItem != null)
+                        rozkaz[1] = Funkcja1.SelectedItem.ToString();
+
+                    if (Funkcja1.SelectedItem != null && Funkcja1.SelectedItem.ToString().Equals("MOV"))
+                    {
+                        if (comboBox4.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejDoc[1] = Procesor.AH;
+                        }
+                        if (comboBox4.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejDoc[1] = Procesor.BH;
+                        }
+                        if (comboBox4.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejDoc[1] = Procesor.CH;
+                        }
+                        if (comboBox4.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejDoc[1] = Procesor.DH;
+                        }
+                    }
+
+                    try
+                    {
+                        if (Funkcja1.SelectedItem != null && !checkBox2.Checked)
+                        {
+
+                            if (comboBox5.SelectedItem.ToString().Equals("AX"))
+                            {
+                                rejZr[1] = Procesor.AH;
+                            }
+                            if (comboBox5.SelectedItem.ToString().Equals("BX"))
+                            {
+                                rejZr[1] = Procesor.BH;
+                            }
+                            if (comboBox5.SelectedItem.ToString().Equals("CX"))
+                            {
+                                rejZr[1] = Procesor.CH;
+                            }
+                            if (comboBox5.SelectedItem.ToString().Equals("DX"))
+                            {
+                                rejZr[1] = Procesor.DH;
+                            }
+                        }
+                        else
+                        {
+                            stala[1] = TextControllClass.TextToNumber(textBox2.Text);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wybierz argument dla rozkazu 2.", "Błąd");
+                    }
                 }
             }
-            catch (Exception)
+            if (rbReg.Checked == true)
             {
-                MessageBox.Show("Wybierz argument dla rozkazu 2.", "Błąd");
+                iloscRozkazow++;
+                if (Funkcja1.SelectedItem != null)
+                    rozkaz[1] = Funkcja1.SelectedItem.ToString();
+
+                if (Funkcja1.SelectedItem != null && Funkcja1.SelectedItem.ToString().Equals("MOV"))
+                {
+                    if (comboBox4.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejDoc[1] = Procesor.AH;
+                    }
+                    if (comboBox4.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejDoc[1] = Procesor.BH;
+                    }
+                    if (comboBox4.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejDoc[1] = Procesor.CH;
+                    }
+                    if (comboBox4.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejDoc[1] = Procesor.DH;
+                    }
+                }
+
+                try
+                {
+                    if (Funkcja1.SelectedItem != null && !checkBox2.Checked)
+                    {
+
+                        if (comboBox5.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejZr[1] = Procesor.AH;
+                        }
+                        if (comboBox5.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejZr[1] = Procesor.BH;
+                        }
+                        if (comboBox5.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejZr[1] = Procesor.CH;
+                        }
+                        if (comboBox5.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejZr[1] = Procesor.DH;
+                        }
+                    }
+                    else
+                    {
+                        stala[1] = TextControllClass.TextToNumber(textBox2.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wybierz argument dla rozkazu 2.", "Błąd");
+                }
             }
+
 
             //TRZECI PRZYPADEK
-            iloscRozkazow++;
-            if (Funkcja2.SelectedItem != null)
-                rozkaz[2] = Funkcja2.SelectedItem.ToString();
 
-            if(Funkcja2.SelectedItem!=null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
+            if (rbIns.Checked == true)
             {
-                if (comboBox6.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejDoc[2] = Procesor.AH;
-                }
-                if (comboBox6.SelectedItem.ToString().Equals("BX"))
-                {
-                    rejDoc[2] = Procesor.BH;
-                }
-                if (comboBox6.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejDoc[2] = Procesor.CH;
-                }
-                if (comboBox6.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejDoc[2] = Procesor.DH;
-                }
-            }
-
-            try
-            {
-                if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
-                {
-
-                    if (comboBox7.SelectedItem.ToString().Equals("AX"))
-                    {
-                        rejZr[2] = Procesor.AH;
-                    }
-                    if (comboBox7.SelectedItem.ToString().Equals("BX"))
-                    {
-                        rejZr[2] = Procesor.BH;
-                    }
-                    if (comboBox7.SelectedItem.ToString().Equals("CX"))
-                    {
-                        rejZr[2] = Procesor.CH;
-                    }
-                    if (comboBox7.SelectedItem.ToString().Equals("DX"))
-                    {
-                        rejZr[2] = Procesor.DH;
-                    }
-                }
+                if (textBox3.Text.Length == 0)
+                    MessageBox.Show("This field cannot be empty!");
                 else
                 {
-                    stala[2] = TextControllClass.textToNumber(textBox3.Text);
+                    iloscRozkazow++;
+                    if (Funkcja2.SelectedItem != null)
+                        rozkaz[2] = Funkcja2.SelectedItem.ToString();
+
+                    if (Funkcja2.SelectedItem != null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
+                    {
+                        if (comboBox6.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejDoc[2] = Procesor.AH;
+                        }
+                        if (comboBox6.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejDoc[2] = Procesor.BH;
+                        }
+                        if (comboBox6.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejDoc[2] = Procesor.CH;
+                        }
+                        if (comboBox6.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejDoc[2] = Procesor.DH;
+                        }
+                    }
+
+                    try
+                    {
+                        if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
+                        {
+
+                            if (comboBox7.SelectedItem.ToString().Equals("AX"))
+                            {
+                                rejZr[2] = Procesor.AH;
+                            }
+                            if (comboBox7.SelectedItem.ToString().Equals("BX"))
+                            {
+                                rejZr[2] = Procesor.BH;
+                            }
+                            if (comboBox7.SelectedItem.ToString().Equals("CX"))
+                            {
+                                rejZr[2] = Procesor.CH;
+                            }
+                            if (comboBox7.SelectedItem.ToString().Equals("DX"))
+                            {
+                                rejZr[2] = Procesor.DH;
+                            }
+                        }
+                        else
+                        {
+                            stala[2] = TextControllClass.TextToNumber(textBox3.Text);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wybierz argument dla rozkazu 3.", "Błąd");
+                    }
                 }
             }
-            catch(Exception)
+            if (rbReg.Checked == true)
             {
-                MessageBox.Show("Wybierz argument dla rozkazu 3.", "Błąd");
+                iloscRozkazow++;
+                if (Funkcja2.SelectedItem != null)
+                    rozkaz[2] = Funkcja2.SelectedItem.ToString();
+
+                if (Funkcja2.SelectedItem != null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
+                {
+                    if (comboBox6.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejDoc[2] = Procesor.AH;
+                    }
+                    if (comboBox6.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejDoc[2] = Procesor.BH;
+                    }
+                    if (comboBox6.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejDoc[2] = Procesor.CH;
+                    }
+                    if (comboBox6.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejDoc[2] = Procesor.DH;
+                    }
+                }
+
+                try
+                {
+                    if (Funkcja2.SelectedItem != null && !checkBox3.Checked)
+                    {
+
+                        if (comboBox7.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejZr[2] = Procesor.AH;
+                        }
+                        if (comboBox7.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejZr[2] = Procesor.BH;
+                        }
+                        if (comboBox7.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejZr[2] = Procesor.CH;
+                        }
+                        if (comboBox7.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejZr[2] = Procesor.DH;
+                        }
+                    }
+                    else
+                    {
+                        stala[2] = TextControllClass.TextToNumber(textBox3.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wybierz argument dla rozkazu 3.", "Błąd");
+                }
             }
+
 
             //CZWARTY PRZYPADEK
-            iloscRozkazow++;
-            if (Funkcja3.SelectedItem != null)
-                rozkaz[3] = Funkcja3.SelectedItem.ToString();
-            
-            if (Funkcja3.SelectedItem != null && Funkcja3.SelectedItem.ToString().Equals("MOV"))
-            {
-                if (comboBox8.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejDoc[3] = Procesor.AH;
-                }
-                if (comboBox8.SelectedItem.ToString().Equals("BX"))
-                {
-                    rejDoc[3] = Procesor.BH;
-                }
-                if (comboBox8.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejDoc[3] = Procesor.CH;
-                }
-                if (comboBox8.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejDoc[3] = Procesor.DH;
-                }
-            }
 
-            try
+            if (rbIns.Checked == true)
             {
-                if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
-                {
-
-                    if (comboBox9.SelectedItem.ToString().Equals("AX"))
-                    {
-                        rejZr[3] = Procesor.AH;
-                    }
-                    if (comboBox9.SelectedItem.ToString().Equals("BX"))
-                    {
-                        rejZr[3] = Procesor.BH;
-                    }
-                    if (comboBox9.SelectedItem.ToString().Equals("CX"))
-                    {
-                        rejZr[3] = Procesor.CH;
-                    }
-                    if (comboBox9.SelectedItem.ToString().Equals("DX"))
-                    {
-                        rejZr[3] = Procesor.DH;
-                    }
-                }
+                if (textBox4.Text.Length == 0)
+                    MessageBox.Show("This field cannot be empty!");
                 else
                 {
-                    stala[3] = TextControllClass.textToNumber(textBox4.Text);
+                    iloscRozkazow++;
+                    if (Funkcja3.SelectedItem != null)
+                        rozkaz[3] = Funkcja3.SelectedItem.ToString();
+
+                    if (Funkcja3.SelectedItem != null && Funkcja3.SelectedItem.ToString().Equals("MOV"))
+                    {
+                        if (comboBox8.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejDoc[3] = Procesor.AH;
+                        }
+                        if (comboBox8.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejDoc[3] = Procesor.BH;
+                        }
+                        if (comboBox8.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejDoc[3] = Procesor.CH;
+                        }
+                        if (comboBox8.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejDoc[3] = Procesor.DH;
+                        }
+                    }
+
+                    try
+                    {
+                        if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
+                        {
+
+                            if (comboBox9.SelectedItem.ToString().Equals("AX"))
+                            {
+                                rejZr[3] = Procesor.AH;
+                            }
+                            if (comboBox9.SelectedItem.ToString().Equals("BX"))
+                            {
+                                rejZr[3] = Procesor.BH;
+                            }
+                            if (comboBox9.SelectedItem.ToString().Equals("CX"))
+                            {
+                                rejZr[3] = Procesor.CH;
+                            }
+                            if (comboBox9.SelectedItem.ToString().Equals("DX"))
+                            {
+                                rejZr[3] = Procesor.DH;
+                            }
+                        }
+                        else
+                        {
+                            stala[3] = TextControllClass.TextToNumber(textBox4.Text);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wybierz argument dla rozkazu 4.", "Błąd");
+                    }
                 }
             }
-            catch (Exception)
+            if (rbReg.Checked == true)
             {
-                MessageBox.Show("Wybierz argument dla rozkazu 4.", "Błąd");
+                iloscRozkazow++;
+                if (Funkcja3.SelectedItem != null)
+                    rozkaz[3] = Funkcja3.SelectedItem.ToString();
+
+                if (Funkcja3.SelectedItem != null && Funkcja3.SelectedItem.ToString().Equals("MOV"))
+                {
+                    if (comboBox8.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejDoc[3] = Procesor.AH;
+                    }
+                    if (comboBox8.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejDoc[3] = Procesor.BH;
+                    }
+                    if (comboBox8.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejDoc[3] = Procesor.CH;
+                    }
+                    if (comboBox8.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejDoc[3] = Procesor.DH;
+                    }
+                }
+
+                try
+                {
+                    if (Funkcja3.SelectedItem != null && !checkBox4.Checked)
+                    {
+
+                        if (comboBox9.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejZr[3] = Procesor.AH;
+                        }
+                        if (comboBox9.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejZr[3] = Procesor.BH;
+                        }
+                        if (comboBox9.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejZr[3] = Procesor.CH;
+                        }
+                        if (comboBox9.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejZr[3] = Procesor.DH;
+                        }
+                    }
+                    else
+                    {
+                        stala[3] = TextControllClass.TextToNumber(textBox4.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wybierz argument dla rozkazu 4.", "Błąd");
+                }
             }
+
 
             //PIĄTY PRZYPADEK
-            iloscRozkazow++;
-            if (Funkcja4.SelectedItem != null)
-            {
-                rozkaz[4] = Funkcja4.SelectedItem.ToString();
-            }
 
-            if (Funkcja4.SelectedItem !=null && Funkcja4.SelectedItem.ToString().Equals("MOV"))
+            if (rbIns.Checked == true)
             {
-                if (comboBox10.SelectedItem.ToString().Equals("AX"))
-                {
-                    rejDoc[4] = Procesor.AH;
-                }
-                if (comboBox10.SelectedItem.ToString().Equals("BX"))
-                {
-                    rejDoc[4] = Procesor.BH;
-                }
-                if (comboBox10.SelectedItem.ToString().Equals("CX"))
-                {
-                    rejDoc[4] = Procesor.CH;
-                }
-                if (comboBox10.SelectedItem.ToString().Equals("DX"))
-                {
-                    rejDoc[4] = Procesor.DH;
-                }
-            }
-
-            try
-            {
-                if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
-                {
-
-                    if (comboBox11.SelectedItem.ToString().Equals("AX"))
-                    {
-                        rejZr[4] = Procesor.AH;
-                    }
-                    if (comboBox11.SelectedItem.ToString().Equals("BX"))
-                    {
-                        rejZr[4] = Procesor.BH;
-                    }
-                    if (comboBox11.SelectedItem.ToString().Equals("CX"))
-                    {
-                        rejZr[4] = Procesor.CH;
-                    }
-                    if (comboBox11.SelectedItem.ToString().Equals("DX"))
-                    {
-                        rejZr[4] = Procesor.DH;
-                    }
-                }
+                if (textBox5.Text.Length == 0)
+                    MessageBox.Show("This field cannot be empty!");
                 else
                 {
-                    stala[4] = TextControllClass.textToNumber(textBox5.Text);
+                    iloscRozkazow++;
+                    if (Funkcja4.SelectedItem != null)
+                    {
+                        rozkaz[4] = Funkcja4.SelectedItem.ToString();
+                    }
+
+                    if (Funkcja4.SelectedItem != null && Funkcja4.SelectedItem.ToString().Equals("MOV"))
+                    {
+                        if (comboBox10.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejDoc[4] = Procesor.AH;
+                        }
+                        if (comboBox10.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejDoc[4] = Procesor.BH;
+                        }
+                        if (comboBox10.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejDoc[4] = Procesor.CH;
+                        }
+                        if (comboBox10.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejDoc[4] = Procesor.DH;
+                        }
+                    }
+
+                    try
+                    {
+                        if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
+                        {
+
+                            if (comboBox11.SelectedItem.ToString().Equals("AX"))
+                            {
+                                rejZr[4] = Procesor.AH;
+                            }
+                            if (comboBox11.SelectedItem.ToString().Equals("BX"))
+                            {
+                                rejZr[4] = Procesor.BH;
+                            }
+                            if (comboBox11.SelectedItem.ToString().Equals("CX"))
+                            {
+                                rejZr[4] = Procesor.CH;
+                            }
+                            if (comboBox11.SelectedItem.ToString().Equals("DX"))
+                            {
+                                rejZr[4] = Procesor.DH;
+                            }
+                        }
+                        else
+                        {
+                            stala[4] = TextControllClass.TextToNumber(textBox5.Text);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Wybierz argument dla rozkazu 5.", "Błąd");
+                    }
                 }
             }
-            catch(Exception)
+            if (rbReg.Checked == true)
             {
-                MessageBox.Show("Wybierz argument dla rozkazu 5.", "Błąd");
+                iloscRozkazow++;
+                if (Funkcja4.SelectedItem != null)
+                {
+                    rozkaz[4] = Funkcja4.SelectedItem.ToString();
+                }
+
+                if (Funkcja4.SelectedItem != null && Funkcja4.SelectedItem.ToString().Equals("MOV"))
+                {
+                    if (comboBox10.SelectedItem.ToString().Equals("AX"))
+                    {
+                        rejDoc[4] = Procesor.AH;
+                    }
+                    if (comboBox10.SelectedItem.ToString().Equals("BX"))
+                    {
+                        rejDoc[4] = Procesor.BH;
+                    }
+                    if (comboBox10.SelectedItem.ToString().Equals("CX"))
+                    {
+                        rejDoc[4] = Procesor.CH;
+                    }
+                    if (comboBox10.SelectedItem.ToString().Equals("DX"))
+                    {
+                        rejDoc[4] = Procesor.DH;
+                    }
+                }
+
+                try
+                {
+                    if (Funkcja4.SelectedItem != null && !checkBox5.Checked)
+                    {
+
+                        if (comboBox11.SelectedItem.ToString().Equals("AX"))
+                        {
+                            rejZr[4] = Procesor.AH;
+                        }
+                        if (comboBox11.SelectedItem.ToString().Equals("BX"))
+                        {
+                            rejZr[4] = Procesor.BH;
+                        }
+                        if (comboBox11.SelectedItem.ToString().Equals("CX"))
+                        {
+                            rejZr[4] = Procesor.CH;
+                        }
+                        if (comboBox11.SelectedItem.ToString().Equals("DX"))
+                        {
+                            rejZr[4] = Procesor.DH;
+                        }
+                    }
+                    else
+                    {
+                        stala[4] = TextControllClass.TextToNumber(textBox5.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wybierz argument dla rozkazu 5.", "Błąd");
+                }
             }
 
 
@@ -1008,14 +1344,32 @@ namespace Mikroprocesor
                 of3.Visible = true;
                 of4.Visible = true;
             }
-            else
+            /*else
             {
                 OF.Visible = false;
                 of1.Visible = false;
                 of2.Visible = false;
                 of3.Visible = false;
                 of4.Visible = false;
-            }
+            }*/
+            
+        }
+
+        private void RbReg_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBox3.Enabled = true;
+            comboBox5.Enabled = true;
+            comboBox7.Enabled = true;
+            comboBox9.Enabled = true;
+        }
+
+        private void RbIns_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            comboBox3.Enabled = false;
+            comboBox5.Enabled = false;
+            comboBox7.Enabled = false;
+            comboBox9.Enabled = false;
             
         }
     }

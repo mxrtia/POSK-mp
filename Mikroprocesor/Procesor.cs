@@ -9,10 +9,10 @@ namespace Mikroprocesor
 {
     public static class Procesor
     {
-        private static bool[] rejestr = new bool[64]; //4 rejestry po 16 bitów = 64
+        private static bool[] rejestr = new bool[64];
 
 
-        // --- adresy pierwszych komórek danych rejestrów
+        //Adresy pierwszych komórek danych rejestrów
         //AX
         public const byte AH = 0;
         public const byte AL = 8;
@@ -27,9 +27,9 @@ namespace Mikroprocesor
         public const byte DL = 56;
 
         //flagi
-        private static bool CF = false; //flaga przeniesienia
-        private static bool OF = false; //flaga przepełnienia
-        public static bool TF = false; //flaga pracy krokowej
+        private static bool CF = false; 
+        private static bool OF = false; 
+        public static bool TF = false; 
 
 
 
@@ -37,8 +37,6 @@ namespace Mikroprocesor
         {
             return OF;
         }
-
-
 
         public static void MOV(byte RD, byte RS)
         {
@@ -102,9 +100,6 @@ namespace Mikroprocesor
                         CF = false;
                     }
                 }
-
-
-
 
             }
             if (CF)
@@ -248,10 +243,6 @@ namespace Mikroprocesor
                         CF = false;
                     }
                 }
-
-
-
-
             }
             if (CF)
             {
@@ -330,10 +321,6 @@ namespace Mikroprocesor
                         CF = false;
                     }
                 }
-
-
-
-
             }
             if (CF)
             {
@@ -347,8 +334,6 @@ namespace Mikroprocesor
             }
             else OF = false;
         }
-
-
 
         public static string rejestrJakoTekst(byte adresRejestru)
         {
@@ -397,8 +382,6 @@ namespace Mikroprocesor
                 textBoxValue = buff;
             }
             return textBoxValue;
-
-
         }
 
         public static bool charToBool(char bit)
@@ -407,15 +390,13 @@ namespace Mikroprocesor
             else return false;
         }
 
-        public static bool[] textToNumber(string text)
+        public static bool[] TextToNumber(string text)
         {
             bool[] tymcz = new bool[16];
             for (int i = 0; i < 16; i++)
             {
                 if (i < text.Length) tymcz[15 - i] = charToBool(text[text.Length - 1 - i]);
                 else tymcz[15 - i] = false;
-
-
 
             }
             return tymcz;

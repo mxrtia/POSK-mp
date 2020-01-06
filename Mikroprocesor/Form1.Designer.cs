@@ -55,8 +55,8 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbReg = new System.Windows.Forms.RadioButton();
+            this.rbIns = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -103,6 +103,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // AX
@@ -403,31 +407,35 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Argument:";
             // 
-            // radioButton3
+            // rbReg
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(808, 496);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(210, 21);
-            this.radioButton3.TabIndex = 61;
-            this.radioButton3.Text = "Tryb adresowania rejestrowy";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbReg.AutoSize = true;
+            this.rbReg.Checked = true;
+            this.rbReg.Location = new System.Drawing.Point(4, 22);
+            this.rbReg.Name = "rbReg";
+            this.rbReg.Size = new System.Drawing.Size(210, 21);
+            this.rbReg.TabIndex = 61;
+            this.rbReg.TabStop = true;
+            this.rbReg.Text = "Tryb adresowania rejestrowy";
+            this.rbReg.UseVisualStyleBackColor = true;
+            this.rbReg.CheckedChanged += new System.EventHandler(this.RbReg_CheckedChanged);
             // 
-            // radioButton4
+            // rbIns
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(808, 523);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(245, 21);
-            this.radioButton4.TabIndex = 62;
-            this.radioButton4.Text = "Tryb adresowania natychmiastowy";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbIns.AutoSize = true;
+            this.rbIns.Location = new System.Drawing.Point(4, 45);
+            this.rbIns.Name = "rbIns";
+            this.rbIns.Size = new System.Drawing.Size(245, 21);
+            this.rbIns.TabIndex = 62;
+            this.rbIns.Text = "Tryb adresowania natychmiastowy";
+            this.rbIns.UseVisualStyleBackColor = true;
+            this.rbIns.CheckedChanged += new System.EventHandler(this.RbIns_CheckedChanged);
             // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(808, 393);
+            this.radioButton5.Location = new System.Drawing.Point(6, 24);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(216, 21);
             this.radioButton5.TabIndex = 63;
@@ -438,7 +446,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(808, 420);
+            this.radioButton6.Location = new System.Drawing.Point(6, 45);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(156, 21);
             this.radioButton6.TabIndex = 64;
@@ -914,6 +922,28 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton5);
+            this.groupBox1.Controls.Add(this.radioButton6);
+            this.groupBox1.Location = new System.Drawing.Point(792, 376);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(261, 78);
+            this.groupBox1.TabIndex = 113;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tryb wykonania:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbReg);
+            this.groupBox2.Controls.Add(this.rbIns);
+            this.groupBox2.Location = new System.Drawing.Point(792, 469);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(249, 100);
+            this.groupBox2.TabIndex = 114;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tryb adresowania:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -963,10 +993,6 @@
             this.Controls.Add(this.Funkcja1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox3);
@@ -994,9 +1020,15 @@
             this.Controls.Add(this.CX);
             this.Controls.Add(this.BX);
             this.Controls.Add(this.AX);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1031,8 +1063,8 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbReg;
+        private System.Windows.Forms.RadioButton rbIns;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -1079,6 +1111,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
