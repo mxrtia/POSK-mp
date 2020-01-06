@@ -13,7 +13,6 @@ namespace Mikroprocesor
     public partial class Form1 : Form
     {
 
-        static private bool czyDalej = true;
         static private string[] rozkaz = new string[5];
         static private byte[] rejDoc = new byte[5];
         static private byte[] rejZr = new byte[5];
@@ -21,8 +20,6 @@ namespace Mikroprocesor
         static private bool[] staleCheck = new bool[5];
         private static byte iloscRozkazow = 0;
         private static byte indeksRozkazu = 0;
-        //private bool button1click = true;
-
 
         public Form1()
         {
@@ -549,8 +546,8 @@ namespace Mikroprocesor
             //PIERWSZY PRZYPADEK
             if (rbIns.Checked == true)
             {
-                if (textBox1.Text.Length == 0)
-                    MessageBox.Show("This field cannot be empty!");
+                if (Funkcja.SelectedItem != null && textBox1.Text.Length == 0)
+                    MessageBox.Show("Dodaj stałą w Rozkazie 1!");
                 else
                 {
                     iloscRozkazow++;
@@ -673,8 +670,8 @@ namespace Mikroprocesor
 
             if (rbIns.Checked == true)
             {
-                if (textBox2.Text.Length == 0)
-                    MessageBox.Show("This field cannot be empty!");
+                if (Funkcja1.SelectedItem != null && textBox2.Text.Length == 0)
+                    MessageBox.Show("Dodaj stałą w Rozkazie 2!");
                 else
                 {
                     iloscRozkazow++;
@@ -798,8 +795,8 @@ namespace Mikroprocesor
 
             if (rbIns.Checked == true)
             {
-                if (textBox3.Text.Length == 0)
-                    MessageBox.Show("This field cannot be empty!");
+                if (Funkcja2.SelectedItem != null && textBox3.Text.Length == 0)
+                    MessageBox.Show("Dodaj stałą w Rozkazie 3!");
                 else
                 {
                     iloscRozkazow++;
@@ -862,7 +859,7 @@ namespace Mikroprocesor
             if (rbReg.Checked == true)
             {
                 iloscRozkazow++;
-                if (Funkcja2.SelectedItem != null)
+                if (Funkcja2.SelectedItem != null && Funkcja2.SelectedItem != null)
                     rozkaz[2] = Funkcja2.SelectedItem.ToString();
 
                 if (Funkcja2.SelectedItem != null && Funkcja2.SelectedItem.ToString().Equals("MOV"))
@@ -923,8 +920,8 @@ namespace Mikroprocesor
 
             if (rbIns.Checked == true)
             {
-                if (textBox4.Text.Length == 0)
-                    MessageBox.Show("This field cannot be empty!");
+                if (Funkcja3.SelectedItem != null && textBox4.Text.Length == 0)
+                    MessageBox.Show("Dodaj stałą w Rozkazie 4!");
                 else
                 {
                     iloscRozkazow++;
@@ -1048,8 +1045,8 @@ namespace Mikroprocesor
 
             if (rbIns.Checked == true)
             {
-                if (textBox5.Text.Length == 0)
-                    MessageBox.Show("This field cannot be empty!");
+                if (Funkcja4.SelectedItem != null && textBox5.Text.Length == 0)
+                    MessageBox.Show("Dodaj stałą w Rozkazie 5!");
                 else
                 {
                     iloscRozkazow++;
@@ -1247,7 +1244,7 @@ namespace Mikroprocesor
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Procesor posiada cztery 16-bitowe rejestry: AX, BX, CX i DX." + "\n" + "\n" + "Użytkownik może wybrać z listy rozkaz, a następnie określić, czy ma on zostać wykonany dla danego argumentu, czy dla konkretnej stałej." + "\n" + "\n" + "Mikroprocesor może wykonać maksymalnie pięć rozkazów jednocześnie, przy czym użytkownik musi użyć minimalnie jednego rozkazu, aby mikroprocesor rozpoczął pracę prawidłowo." + "\n" + "\n" + "W prawym dolnym rogu okna użytkownik może wybrać, czy mikroprocesor ma pracować w trybie pracy krokowej lub całościowej (domyślnie jest to praca całościowa) oraz jaki ma być jego tryb adresowania (natychmiastowy lub rejestrowy).", "Instrukcja");
+            MessageBox.Show("Procesor posiada cztery 16-bitowe rejestry: AX, BX, CX i DX." + "\n" + "\n" + "Użytkownik może wybrać z listy rozkaz, a następnie określić, czy ma on zostać wykonany dla danego argumentu, czy dla konkretnej stałej." + "\n" + "\n" + "Mikroprocesor może wykonać maksymalnie pięć rozkazów jednocześnie, przy czym użytkownik musi użyć minimalnie jednego rozkazu, aby mikroprocesor rozpoczął pracę prawidłowo." + "\n" + "\n" + "Użytkownik może wybrać, czy mikroprocesor ma pracować w trybie pracy krokowej lub całościowej (domyślnie jest to praca całościowa) oraz jaki ma być jego tryb adresowania (natychmiastowy lub rejestrowy).", "Instrukcja");
         }
 
         private void Next_Click(object sender, EventArgs e)
@@ -1361,6 +1358,7 @@ namespace Mikroprocesor
             comboBox5.Enabled = true;
             comboBox7.Enabled = true;
             comboBox9.Enabled = true;
+            comboBox11.Enabled = true;
         }
 
         private void RbIns_CheckedChanged(object sender, EventArgs e)
@@ -1370,7 +1368,17 @@ namespace Mikroprocesor
             comboBox5.Enabled = false;
             comboBox7.Enabled = false;
             comboBox9.Enabled = false;
-            
+            comboBox11.Enabled = false;
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
+            textBox5.Enabled = true;
+            checkBox1.Enabled = false;
+            checkBox2.Enabled = false;
+            checkBox3.Enabled = false;
+            checkBox4.Enabled = false;
+            checkBox5.Enabled = false;
         }
     }
 }

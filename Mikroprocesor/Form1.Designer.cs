@@ -371,9 +371,9 @@
             this.WyborRejestru.AutoSize = true;
             this.WyborRejestru.Location = new System.Drawing.Point(69, 188);
             this.WyborRejestru.Name = "WyborRejestru";
-            this.WyborRejestru.Size = new System.Drawing.Size(105, 17);
+            this.WyborRejestru.Size = new System.Drawing.Size(184, 17);
             this.WyborRejestru.TabIndex = 53;
-            this.WyborRejestru.Text = "Wybór rejestru:";
+            this.WyborRejestru.Text = "Wybór rejestru docelowego:";
             // 
             // comboBox3
             // 
@@ -532,9 +532,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(335, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 17);
+            this.label6.Size = new System.Drawing.Size(184, 17);
             this.label6.TabIndex = 70;
-            this.label6.Text = "Wybór rejestru:";
+            this.label6.Text = "Wybór rejestru docelowego:";
             // 
             // label7
             // 
@@ -628,9 +628,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(613, 188);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 17);
+            this.label10.Size = new System.Drawing.Size(184, 17);
             this.label10.TabIndex = 80;
-            this.label10.Text = "Wybór rejestru:";
+            this.label10.Text = "Wybór rejestru docelowego:";
             // 
             // label11
             // 
@@ -724,9 +724,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(899, 188);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 17);
+            this.label14.Size = new System.Drawing.Size(184, 17);
             this.label14.TabIndex = 90;
-            this.label14.Text = "Wybór rejestru:";
+            this.label14.Text = "Wybór rejestru docelowego:";
             // 
             // label15
             // 
@@ -820,9 +820,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(1181, 188);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(105, 17);
+            this.label18.Size = new System.Drawing.Size(184, 17);
             this.label18.TabIndex = 100;
-            this.label18.Text = "Wybór rejestru:";
+            this.label18.Text = "Wybór rejestru docelowego:";
             // 
             // label19
             // 
